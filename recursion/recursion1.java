@@ -1,4 +1,4 @@
-public class recursion2 {
+public class recursion1 {
     public static void printNumb(int n){
         if(n == 0){
             return;
