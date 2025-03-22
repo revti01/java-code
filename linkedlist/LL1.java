@@ -1,53 +1,52 @@
-public class LL1 {
+public class LL1{
     Node head;
 
-    class Node {
+    class node {
         String data;
         Node next;
 
-        Node(String data) {
+        Node(String data){
             this.data = data;
             this.next = null;
         }
     }
 
-    // Add to the first position
-    public void addfirst(String data) {
+    // add - first , last 
+    public void addfirst(String data){
         Node newNode = new Node(data);
-        if (head == null) {
+        if(head == null){
             head = newNode;
             return;
         }
+
         newNode.next = head;
         head = newNode;
     }
 
-    // Add to the last position
-    public void addlast(String data) {
+    // add last 
+    public void addlast(String data){
         Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
+        if(head == null){
+            head == newNode;
             return;
         }
 
         Node currNode = head;
-        while (currNode.next != null) {  // Fixed condition
+        while (currNode != null) {
             currNode = currNode.next;
         }
 
         currNode.next = newNode;
     }
+    // print 
+    public void printlist(){
 
-    // Print the list
-    public void printlist() {
-        if (head == null) {
-            System.out.println("List is empty");
-            return;
+        if(head == null){
+            System.out.println("list is empty");
         }
-
         Node currNode = head;
-        while (currNode != null) {  // Fixed condition
-            System.out.print(currNode.data + " -> ");
+        while (currNode.next != null) {
+            System.out.print(currNode.data + " ->");
             currNode = currNode.next;
         }
 
@@ -58,8 +57,7 @@ public class LL1 {
         LL list = new LL();
         list.addfirst("a");
         list.addfirst("is");
-        list.addlast("linked");
-        list.addlast("list");
         list.printlist();
+
     }
-}
+} 

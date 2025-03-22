@@ -45,7 +45,7 @@ public class LL6 {
         return head;
     }
 
-    // Helper method to print the linked list
+    
     public static void printList(ListNode head) {
         ListNode temp = head;
         while (temp != null) {
@@ -56,7 +56,6 @@ public class LL6 {
     }
 
     public static void main(String[] args) {
-        // Creating a sample linked list: 1 -> 2 -> 3 -> 4 -> 5 -> null
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);

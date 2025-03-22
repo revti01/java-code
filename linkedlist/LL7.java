@@ -1,5 +1,4 @@
 public class LL7 {
-    // Definition of ListNode
     static class ListNode {
         int val;
         ListNode next;
@@ -46,22 +45,22 @@ public class LL7 {
             ListNode secondHalfStart = reverse(firstHalfEnd);
 
             ListNode firstHalfStart = head;
-            ListNode secondHalfCopy = secondHalfStart; // To restore the list later
+            ListNode secondHalfCopy = secondHalfStart;                   // To restore the list later
 
             while (secondHalfStart != null) {
                 if (secondHalfStart.val != firstHalfStart.val) {
-                    reverse(secondHalfCopy); // Restore the list before returning false
+                    reverse(secondHalfCopy);                 // Restore the list before returning false
                     return false;
                 }
                 secondHalfStart = secondHalfStart.next;
                 firstHalfStart = firstHalfStart.next;
             }
 
-            reverse(secondHalfCopy); // Restore the list
+            reverse(secondHalfCopy);                  // Restore the list
             return true;
         }
 
-        // Helper method to print a linked list
+        //  method to print a linked list
         public void printList(ListNode head) {
             ListNode temp = head;
             while (temp != null) {
@@ -75,7 +74,6 @@ public class LL7 {
     public static void main(String[] args) {
         PalindromeLinkedList pll = new PalindromeLinkedList();
 
-        // Creating a palindrome linked list: 1 -> 2 -> 3 -> 2 -> 1
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);

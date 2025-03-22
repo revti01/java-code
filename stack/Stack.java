@@ -1,4 +1,6 @@
-import java.util.*;
+//push at bottom 
+
+import java.util.Stack;
 
 public class Stack {
     public static void pushAtBottom(int data, Stack<Integer> s) {

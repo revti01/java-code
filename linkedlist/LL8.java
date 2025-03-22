@@ -16,14 +16,14 @@ public class LL8 {
         ListNode fast = head;
 
         while (fast != null && fast.next != null) {
-            slow = slow.next;       // Move slow by 1 step
-            fast = fast.next.next;  // Move fast by 2 steps
+            slow = slow.next;
+            fast = fast.next.next;  
 
-            if (fast == slow) {     // Cycle detected
+            if (fast == slow) {     
                 return true;
             }
         }
-        return false;  // No cycle found
+        return false;
     }
 
     public static ListNode createCycleList() {
@@ -43,10 +43,8 @@ public class LL8 {
     public static void main(String[] args) {
         LL8 cycleChecker = new LL8();
 
-        // Create a linked list with a cycle
         ListNode cycleList = createCycleList();
 
-        // Check if the cycle exists
         System.out.println("Does the linked list have a cycle? " + cycleChecker.hasCycle(cycleList));
     }
 }

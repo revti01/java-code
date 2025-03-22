@@ -6,7 +6,7 @@ class Student  {
         System.out.println(this.name);
         System.out.println(this.age);
     }
-    Student(Student s2){
+    Student(Student s2){    // constructors
         this.name = s2.name;
         this.age = s2.age;
     }

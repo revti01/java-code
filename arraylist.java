@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 import java.util.Collections;
 
 
@@ -40,7 +41,7 @@ public class arraylist {
        int size = list.size();
        System.out.println(size);
 
-
+    
        //Loops on lists
        for(int i=0; i<list.size(); i++) {
            System.out.print(list.get(i) + " ");
